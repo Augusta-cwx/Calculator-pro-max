@@ -829,8 +829,8 @@ namespace My{
 			a.clear();
 			if(Type=='^'||Type=='/')FOO(i,_.a)Push_back(_.a[i]);
 			else FOO(i,_.a)Insert(*_.a[i]);
-			FOO(i,s)free(s[i]);
 			v=_.v;
+			FOO(i,s)free(s[i]);
 			return *this;
 		}
 		node& operator=(const int &_){
