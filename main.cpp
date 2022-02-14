@@ -1380,3 +1380,4 @@ void error(const string& s,char c,char d){
 int main(){
 	My::test();
 }
+/**/
