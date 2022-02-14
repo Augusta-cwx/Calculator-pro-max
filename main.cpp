@@ -1,3 +1,4 @@
+/*@copyright Augusta*/
 #include<bits/stdc++.h>
 #include<iostream>
 #include<time.h>
