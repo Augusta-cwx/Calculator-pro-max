@@ -842,8 +842,8 @@ namespace My{
 		}
 		~node(){FOO(i,a)free(a[i]);}
 		bool operator <(const node &_)const{
-			if(cmp(Type,_.Type))return 1;
-			if(cmp(_.Type,Type))return 0;
+			if(cmp(Type,_.Type))return 0;
+			if(cmp(_.Type,Type))return 1;
 			if(Type=='0'){
 				if(isnum()^_.isnum())return isnum();
 				return v<_.v;
@@ -971,6 +971,7 @@ namespace My{
 			}
 		}
 		void Print()const{
+			// printf("{%c,%d,%.4Lf}:",Type,this,v.v);
 			printf("{%.4Lf}[",v.v);
 			Print_();
 			puts("]");
@@ -1233,8 +1234,10 @@ namespace My{
 				case '+':{
 					int flag=0;
 					FOO(i,a)if(a[i]->Type=='/'){
-						*this=node('/',*this**a[i]->a[1],*a[i]->a[1]);
-						break;
+						node x=*this,y=*a[i]->a[1];
+						FOO(j,a)*x.a[j]*=y;
+						*this=x/y;
+						return Abbreviation();
 					}
 					node nw(Type,*a[0]);
 					FOR(i,1,size()){
@@ -1254,14 +1257,16 @@ namespace My{
 				}
 				case '*':{
 					FOO(i,a)if(a[i]->Type=='/'){
-						*this=node('/',*this**a[i]->a[1],*a[i]->a[1]);
-						break;
+						node x=*this,y=*a[i]->a[1];
+						*x.a[i]=*x.a[i]->a[0];
+						*this=x/y;
+						return Abbreviation();
 					}
 					FOO(i,a)if(a[i]->Type=='+'){
 						node nw=node(1);
 						FOO(j,a)nw*=*a[i];
 						*this=nw;
-						break;
+						return Abbreviation();
 					}
 					int flag=0;
 					node nw(Type,*a[0]);
