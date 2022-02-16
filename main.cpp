@@ -842,8 +842,8 @@ namespace My{
 		}
 		~node(){FOO(i,a)free(a[i]);}
 		bool operator <(const node &_)const{
-			if(cmp(Type,_.Type))return 0;
-			if(cmp(_.Type,Type))return 1;
+			if(cmp(Type,_.Type))return 1;
+			if(cmp(_.Type,Type))return 0;
 			if(Type=='0'){
 				if(isnum()^_.isnum())return isnum();
 				return v<_.v;
@@ -964,8 +964,10 @@ namespace My{
 					break;
 				}
 				case '0':{
-					if(isnum())printf("%d",beint(v.v));
-					else printf("%c",v.t);
+					if(isnum()){
+						if(v.v<0)printf("(%d)",beint(v.v));
+						else printf("%d",beint(v.v));
+					}else printf("%c",v.t);
 					break;
 				}
 			}
@@ -1264,7 +1266,7 @@ namespace My{
 					}
 					FOO(i,a)if(a[i]->Type=='+'){
 						node nw=node(1);
-						FOO(j,a)nw*=*a[i];
+						FOO(j,a)nw*=*a[j];
 						*this=nw;
 						return Abbreviation();
 					}
