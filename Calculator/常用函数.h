@@ -17,7 +17,8 @@ bool equ(const double& x, const int& y);
 template<class T>int beint(const T& x) {
 	if (equ(x, (int)x))return (int)x;
 	if (equ(x, 1 + (int)x))return 1 + (int)x;
-	return (int)x - 1;
+	if (equ(x, (int)x - 1))return (int)x - 1;
+	return (int)x;
 }
 bool iszero(int x);
 bool iszero(double x);
@@ -28,4 +29,5 @@ void error(const string& s, char c, char d);
 void output(const char* s, int left, int top);
 void output(int x, int left, int top);
 void output(double x, int left, int top);
+void output(char x, int left, int top);
 double rand_double();

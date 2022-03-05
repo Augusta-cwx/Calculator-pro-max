@@ -77,7 +77,10 @@
     <ClCompile Include="..\基本运算.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\源.cpp">
+    <ClCompile Include="..\main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Data.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -90,21 +90,64 @@ struct Val {
 		}
 		t = '0';
 	}
-	char* getstr()const {
+	string getstr()const {
 		char* str = new char[20];
-		if (t == '0') {
+		switch (t) {
+		case '0': {
 			if (isint(v)) sprintf_s(str, 20, "%d", beint(v));
 			else sprintf_s(str, 20, "%lf", v);
+			break;
 		}
-		else  sprintf_s(str, 20, "%c", t);
-		return str;
+		case '#':case 'E':case 'P':case 'x':case 'y':case 'z':case 'a':case 'b':case 'c': {
+			sprintf_s(str, 20, "%c", t);
+			break;
+		}
+		default: {
+			string res="%.";
+			if (t >= 10) {
+				res += t / 10 + '0';
+				res += t % 10 + '0';
+			}
+			else res += t + '0';
+			res += "lf";
+			sprintf_s(str, 20, res.c_str(), v);
+		}
+		} 
+		string res = str;
+		return res;
+	}
+	int getwidth()const {
+		string str = getstr();
+		int l = textwidth(str.c_str());
+		return l;
 	}
 	int getlen()const {
-		char* str = getstr();
-		//output(str, 100, 400);
-		int l = strlen(str);
-		//output(l, 100, 420);
-		free(str);
+		string str = getstr();
+		int l = str.length();
 		return l;
+	}
+	void getval(string& s) {
+		switch (s[0]) {
+		case 'E':case 'P':case 'x':case 'y':case 'z':case 'a':case 'b':case 'c':v = s[0]; break;
+		default: {
+			v = atof(s.c_str());
+			int pos = s.find('.');
+			if (s.find_first_of('.') != s.find_last_of('.'))error("multiple .");
+			if (pos != s.npos) t = s.length() - pos - 1;
+			else t = '0';
+		}
+		}
+	}
+	Val(const string& s) {
+		switch (s[0]) {
+		case 'E':case 'P':case 'x':case 'y':case 'z':case 'a':case 'b':case 'c':v = s[0]; break;
+		default: {
+			v = atof(s.c_str());
+			int pos = s.find('.');
+			if (s.find_first_of('.') != s.find_last_of('.'))error("multiple .");
+			if (pos != s.npos) t = s.length() - pos - 1;
+			else t = '0';
+		}
+		}
 	}
 };

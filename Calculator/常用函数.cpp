@@ -19,23 +19,42 @@ void error(const string& s, char c, char d) {
 	exit(0);
 }
 void output(const char* s, int left = 50, int top = 50) {
-	settextcolor(WHITE);
+	COLORREF old;
+	old = gettextcolor();
+	settextcolor(RED);
 	outtextxy(left, top, s);
 	Sleep(600);
+	settextcolor(old);
 }
 void output(int x, int left = 50, int top = 50) {
-	settextcolor(WHITE);
+	COLORREF old;
+	old = gettextcolor();
+	settextcolor(RED);
 	char s[20];
 	sprintf_s(s, 20, "%d", x);
 	outtextxy(left, top, s);
 	Sleep(600);
+	settextcolor(old);
 }
 void output(double x, int left = 50, int top = 50) {
-	settextcolor(WHITE);
+	COLORREF old;
+	old = gettextcolor();
+	settextcolor(RED);
 	char s[20];
 	sprintf_s(s, 20, "%lf", x);
 	outtextxy(left, top, s);
 	Sleep(600);
+	settextcolor(old);
+}
+void output(char c, int left = 50, int top = 50) {
+	COLORREF old;
+	old=gettextcolor();
+	settextcolor(RED);
+	char s[20];
+	sprintf_s(s, 20, "%c", c);
+	outtextxy(left, top, s);
+	Sleep(600);
+	settextcolor(old);
 }
 double rand_double() {//[10,110]
 	return (double)(rand() * rand() % 1000000000 + 100000000) / 10000000 * (rand() % 2 ? 1 : -1);

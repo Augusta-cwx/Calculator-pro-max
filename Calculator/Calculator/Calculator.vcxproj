@@ -157,11 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Const.cpp" />
+    <ClCompile Include="..\Data.cpp" />
     <ClCompile Include="..\test.cpp" />
     <ClCompile Include="..\Val.cpp" />
     <ClCompile Include="..\基本运算.cpp" />
     <ClCompile Include="..\常用函数.cpp" />
-    <ClCompile Include="..\源.cpp" />
+    <ClCompile Include="..\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="E.jpg" />

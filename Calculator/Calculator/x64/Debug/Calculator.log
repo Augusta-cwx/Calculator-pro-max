@@ -1,16 +1,23 @@
-﻿  源.cpp
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\menu.h(32,22): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(105,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+﻿  main.cpp
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(126,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(134,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(136,1): warning C4267: “=”: 从“size_t”转换到“char”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(146,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Val.h(148,1): warning C4267: “=”: 从“size_t”转换到“char”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Prime.h(4,16): warning C4244: “初始化”: 从“double”转换到“const int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Prime.h(39,1): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(13,21): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(52,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(53,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(54,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(54,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(55,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(56,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
 D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(57,18): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(350,18): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\源.cpp(18): warning C4172: 返回局部变量或临时变量的地址: str
-D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Textbox.h(145): warning C4715: “EasyTextBox::Get_double”: 不是所有的控件路径都返回值
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(76,1): warning C4554: “>>”: 检查运算符优先级是否存在的可能的错误；使用括号阐明优先级
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(486,18): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(496,1): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(1331,37): warning C4267: “+=”: 从“size_t”转换到“int”，可能丢失数据
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\标准化输出.h(855,53): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\main.cpp(18): warning C4172: 返回局部变量或临时变量的地址: str
+D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\Textbox.h(149): warning C4715: “EasyTextBox::Get_double”: 不是所有的控件路径都返回值
   Calculator.vcxproj -> D:\大学学习\科学与社会\项目代码\基本运算\Calculator pro max\Calculator\x64\Debug\Calculator.exe

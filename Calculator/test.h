@@ -1,6 +1,8 @@
 #pragma once
 #include"标准化输出.h"
 void test() {
+	Work();
+	while (1);
 	Expression E = Expression('E');
 	Expression tmp;
 	tmp.Read();

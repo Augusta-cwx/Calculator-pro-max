@@ -1,5 +1,5 @@
 #pragma once
-
+#include"常用函数.h"
 class EasyTextBox
 {
 private:
@@ -57,6 +57,7 @@ public:
 
 	double Get_double()
 	{
+		ExMessage msg;
 		// 备份环境值
 		int oldlinecolor = getlinecolor();
 		int oldbkcolor = getbkcolor();
@@ -73,7 +74,7 @@ public:
 		bool binput = true;				// 是否输入中
 
 
-		ExMessage msg;
+		//ExMessage msg;
 		while (binput)
 		{
 			while (binput && peekmessage(&msg, EM_MOUSE | EM_CHAR, false))	// 获取消息，但不从消息队列拿出
@@ -120,7 +121,10 @@ public:
 						}break;
 					}
 				}
-				peekmessage(NULL, EM_MOUSE | EM_CHAR);				// 从消息队列抛弃刚刚处理过的一个消息
+				peekmessage(NULL, EM_MOUSE | EM_CHAR);// 从消息队列抛弃刚刚处理过的一个消息
+				output(peekmessage(NULL, EM_MOUSE, false), 50, 50);
+				output("   ", 50, 50);
+				//观测会影响结果
 			}
 
 			// 绘制光标（光标闪烁周期为 20ms * 32）

@@ -1,8 +1,8 @@
 #pragma once
-
+#include"³£ÓÃº¯Êý.h"
 void button(int x, int y, int w, int h, const char* text)
 {
-	setbkmode(TRANSPARENT);
+	//setbkmode(TRANSPARENT);
 	setfillcolor(BROWN);
 	fillroundrect(x, y, x + w, y + h, 10, 10);
 	int tx, ty;
@@ -29,7 +29,6 @@ int menu0()
 }
 #include<cmath>
 #define e 2.718
-const int maxn = 1e5 + 5;
 int menu1()
 {
 	ExMessage msg;

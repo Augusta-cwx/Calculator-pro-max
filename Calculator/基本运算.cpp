@@ -389,7 +389,7 @@ int Expression::Extract() {
 				*this = *a[1];
 			}
 			else {
-				free(a[0]);
+				delete a[0];
 				FOR(i, 1, size()) {
 					p *= a[i]->Extract();
 					a[i - 1] = a[i];
@@ -645,13 +645,13 @@ Expression& Expression::operator=(const Expression& _) {
 	if (Type == '^' || Type == '/')FOO(i, _.a)Push_back(_.a[i]);
 	else FOO(i, _.a)Insert(*_.a[i]);
 	v = _.v;
-	FOO(i, s)free(s[i]);
+	FOO(i, s)delete s[i];
 	return *this;
 }
 Expression& Expression::operator=(const int& _) {
 	Type = '0';
 	v = _;
-	FOO(i, a)free(a[i]);
+	FOO(i, a)delete a[i];
 	a.clear();
 	return *this;
 }
